@@ -1,0 +1,7 @@
+/saved_models*/
+/scripts*/
+/tsp_logs*/
+*.log
+tsp.socket
+dataset/
+__pycache__
