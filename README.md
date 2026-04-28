@@ -7,6 +7,7 @@ Some of us also had AppleOS. This created a very confilcting work environment fo
 
 
 The 3rd dataset can be found in this link: https://samate.nist.gov/SARD/test-suites/112
+
 The dataset is zipped up in the data folder. Unzip it after downloading the git.
 
 The Juliet Test Suite is the perfect "stress test" for your research because it isolates causality from pattern matching.
