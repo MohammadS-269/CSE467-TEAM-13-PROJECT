@@ -1,0 +1,5 @@
+data-package/causal_env/
+data-package/data/
+__pycache__/
+*.pyc
+.DS_Store
