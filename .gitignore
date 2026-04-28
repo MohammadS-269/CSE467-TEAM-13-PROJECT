@@ -1,0 +1,9 @@
+# Ignore the virtual environment
+causal_env/
+
+# Ignore large data and model files
+saved_models/
+*.bin
+*.dll
+*.lib
+*.pkl

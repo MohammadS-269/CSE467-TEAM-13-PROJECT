@@ -1,3 +1,66 @@
+Some of the libraries and code from the original research was outdated. In order to run it on our machine, we had to update the code and the running.
+
+Windows Tip: If the training hangs or crashes immediately, check run.py and ensure num_workers=0 in the DataLoader settings. Windows handles multiprocessing differently than Linux.
+
+A key obstacle we encountered is that every member has a different OS. Some have Windows on a strong gaming computer while others have just a regular Windows school laptop.
+Some of us also had AppleOS. This created a very confilcting work environment for us so the steps may differ depending on your operating systems and specs.
+
+
+The 3rd dataset can be found in this link: https://samate.nist.gov/SARD/test-suites/112
+
+The dataset is zipped up in the data folder. Unzip it after downloading the git.
+
+The Juliet Test Suite is the perfect "stress test" for your research because it isolates causality from pattern matching.
+
+Since the team is focused on whether models learn true vulnerability logic or just "cheat" by memorizing names, Juliet acts as the ultimate truth-teller.
+
+1. Pre-requisites
+
+    Install Git and Git LFS.
+
+    Install Python 3.8 - 3.10 (Higher versions sometimes break tree-sitter).
+
+    Install C++ Build Tools (Required for compiling the tree-sitter parser).
+
+2. Clone and Pull Models
+
+Since we use LFS for the models, a standard download isn't enough.
+In PowerShell:
+
+git lfs install
+git clone https://github.com/MohammadS-269/CSE467-TEAM-13-PROJECT.git
+cd CSE467-TEAM-13-PROJECT
+# Ensure the .bin files are actually downloaded (not just pointer files)
+git lfs pull
+
+3. Setup the Virtual Environment. In Powershell:
+
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r requirements.txt
+
+
+4. The "Tree-Sitter" Fix
+
+Tree-sitter creates a platform-specific library. You must re-generate it for your specific Windows setup:
+# Run your build script (likely something like this)
+python parser/build.py
+
+
+Why these steps are necessary
+
+    LFS Pull: If they skip this, their model.bin will only be 1KB (a text pointer), and the code will crash with a "magic header" error.
+
+    Virtual Env: Python libraries like torch and transformers often have machine-specific binaries. Building a fresh venv ensures their local GPU (if they have one) is detected correctly.
+
+    Tree-Sitter: This library parses the C++ code into the graphs that GraphCodeBERT needs. The compiled parser from your machine won't work on theirs because of different Windows system paths.
+
+
+
+
+BELOW ARE THE STEPS FROM THE ORIGINAL RESEARCH FOR REFFERENCE. ABOVE ARE THE STEPS FROM THE SPRING CSE467 2026 THAT TEAM 17 FOLLOWED.
+
+
 # Data package for "Towards Causal Deep Learning for Vulnerability Detection"
 
 ## Organization
