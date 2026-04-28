@@ -1,0 +1,15 @@
+# Environments and junk
+data-package/causal_env/
+**/pycache/
+*.pyc
+.DS_Store
+
+# Large Data & Models
+data-package/data/
+data-package/saved_models_07_23/
+
+# Heavy Binaries & Data formats
+*.bin
+*.dylib
+*.so
+*.jsonl
