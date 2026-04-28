@@ -1,8 +1,9 @@
 # Ignore the virtual environment
-causal_env/
+data-package/causal_env/
 
 # Ignore large data and model files
-saved_models/
+data-package/saved_models/
+data-package/data
 *.bin
 *.dll
 *.lib
