@@ -11,7 +11,8 @@ The 3rd dataset can be found in this link: https://samate.nist.gov/SARD/test-sui
 The dataset is zipped up in the data folder. Unzip it after downloading the git.
 
 The Juliet Test Suite is the perfect "stress test" for your research because it isolates causality from pattern matching.
-Since your team is focused on whether models learn true vulnerability logic or just "cheat" by memorizing names, Juliet acts as the ultimate truth-teller.
+
+Since the team is focused on whether models learn true vulnerability logic or just "cheat" by memorizing names, Juliet acts as the ultimate truth-teller.
 
 1. Pre-requisites
 
