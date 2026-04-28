@@ -1,0 +1,7 @@
+data-package/causal_env/
+data-package/data/MSR/*.pkl
+data-package/data/MSR/train*.jsonl
+data-package/data/Devign/train_no_transform_with_xp.jsonl
+__pycache__/
+*.pyc
+.DS_Store
